@@ -67,8 +67,8 @@ allprojects {
 dependencies {
     //implementation(project(path: ":engine"))
     //implementation(project(path: ":folia"))
-    implementation project(':engine')
-    implementation project(':folia')
+    compile project(':engine')
+    compile project(':folia')
 }
 
 tasks {
