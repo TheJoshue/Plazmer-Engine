@@ -78,8 +78,8 @@ tasks {
         archiveClassifier.set("")
         destinationDirectory.set(rootProject.buildDir)
         dependencies {
-            include(dependency(project(':engine')))
-            include(dependency(project(':folia')))
+            include(project(':engine'))
+            include(project(':folia'))
         }
     }
 
