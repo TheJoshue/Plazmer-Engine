@@ -12,6 +12,7 @@ allprojects {
     version = '2.4.7'
     sourceCompatibility = 17
     targetCompatibility = 17
+    compileJava.options.encoding = 'UTF-8'
 
     processResources {
         def props = [version: version]
