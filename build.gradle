@@ -67,20 +67,23 @@ allprojects {
 dependencies {
     //implementation(project(path: ":engine"))
     //implementation(project(path: ":folia"))
-    compile project(':engine')
-    compile project(':folia')
+    implementation project(':engine')
+    implementation project(':folia')
 }
 
 tasks {
 
-    shadowJar {
+    /*shadowJar {
         archivesBaseName = "PLAZMER-ENGINE"
         archiveClassifier.set("")
         destinationDirectory.set(rootProject.buildDir)
-    }
+    }*/
 
     build {
-        dependsOn(shadowJar)
+        archivesBaseName = "PLAZMER-ENGINE"
+        archiveClassifier.set("")
+        destinationDirectory.set(rootProject.buildDir)
+        //dependsOn(shadowJar)
     }
 }
 
