@@ -67,8 +67,8 @@ allprojects {
 dependencies {
     //implementation(project(path: ":engine"))
     //implementation(project(path: ":folia"))
-    implementation project(':engine')
-    implementation project(':folia')
+    shadow project(':engine')
+    shadow project(':folia')
 }
 
 tasks {
@@ -81,9 +81,6 @@ tasks {
 
     build {
         dependsOn(shadowJar)
-        artifact(tasks.shadowJar) {
-                classifier = null
-         }
     }
 }
 
