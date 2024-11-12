@@ -46,8 +46,8 @@ dependencies {
     implementation project(":folia")
 }
 
-tasks {
+/*tasks {
     build {
         dependsOn(shadowJar)
     }
-}
+}*/
