@@ -77,14 +77,15 @@ tasks {
         archivesBaseName = "PLAZMER-ENGINE"
         archiveClassifier.set("")
         destinationDirectory.set(rootProject.buildDir)
-        dependencies {
+        /*dependencies {
             include(project(':engine'))
             include(project(':folia'))
-        }
+        }*/
     }
 
     build {
-        dependsOn(shadowJar)
+        //dependsOn(shadowJar)
+        dependsOn(':engine:build', ':folia:build', shadowJar)
     }
 }
 
