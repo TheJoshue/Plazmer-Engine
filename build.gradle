@@ -76,6 +76,10 @@ tasks {
     shadowJar {
         archivesBaseName = "PLAZMER-ENGINE"
         archiveClassifier.set("")
+    	dependencies {
+	    	include(dependency(':engine'))
+    		include(dependency(':folia'))
+        }
         destinationDirectory.set(rootProject.buildDir)
     }
 
