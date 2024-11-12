@@ -73,21 +73,21 @@ dependencies {
 
 tasks {
 
-    /*shadowJar {
+    shadowJar {
         archivesBaseName = "PLAZMER-ENGINE"
         archiveClassifier.set("")
         destinationDirectory.set(rootProject.buildDir)
-    }*/
+    }
 
     build {
-        archivesBaseName = "PLAZMER-ENGINE"
-        archiveClassifier.set("")
-        destinationDirectory.set(rootProject.buildDir)
-        //dependsOn(shadowJar)
+        dependsOn(shadowJar)
+        artifact(tasks.shadowJar) {
+                classifier = null
+         }
     }
 }
 
-publishing {
+/*publishing {
     publications {
         mavenJava(MavenPublication) {
             artifact(tasks.shadowJar) {
@@ -110,4 +110,4 @@ publishing {
             url = 'https://jitpack.io'
         }
     }
-}
+}*/
